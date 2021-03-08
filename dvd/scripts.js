@@ -20,7 +20,7 @@ window.onload = function() {
 	canvas = document.getElementById("mainCanvas");
 	
 	x = Math.floor(Math.random()*(canvas.width-160));
-	y = Math.floor(Math.random()*(canvas.height-120));
+	y = Math.floor(Math.random()*(canvas.height-80));
 	
 	logo = new Image();
 	logo.src = "logo.png";
@@ -40,7 +40,7 @@ function refresh() {
 		randomizeColor();
 		xSpeed*=-1;
 	}
-	if(y < 0 || y > canvas.height-120) {
+	if(y < 0 || y > canvas.height-80) {
 		randomizeColor();
 		ySpeed*=-1;
 	}
@@ -54,7 +54,7 @@ function refresh() {
 	c.globalCompositeOperation = "destination-atop";
 	
 	
-	c.drawImage(logo, x, y, 160, 120);
+	c.drawImage(logo, x, y, 160, 80);
 	
 	
 	c.fillStyle = "black";
