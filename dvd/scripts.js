@@ -18,6 +18,8 @@ function randomizeColor() {
 
 window.onload = function() {
 	canvas = document.getElementById("mainCanvas");
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
 	
 	x = Math.floor(Math.random()*(canvas.width-160));
 	y = Math.floor(Math.random()*(canvas.height-80));
@@ -27,6 +29,11 @@ window.onload = function() {
 	
 	randomizeColor();
 	refresh();
+}
+
+window.onresize = function() {
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
 }
 
 function refresh() {
@@ -39,10 +46,20 @@ function refresh() {
 	if(x < 0 || x > canvas.width-160) {
 		randomizeColor();
 		xSpeed*=-1;
+		if(x < 0) {
+			x = 0;
+		} else {
+			x = canvas.width-160;
+		}
 	}
 	if(y < 0 || y > canvas.height-80) {
 		randomizeColor();
 		ySpeed*=-1;
+		if(y < 0) {
+			y = 0;
+		} else {
+			y = canvas.height-80;
+		}
 	}
 
 	x+=xSpeed;
@@ -56,12 +73,8 @@ function refresh() {
 	
 	c.drawImage(logo, x, y, 160, 80);
 	
-	
-	c.fillStyle = "black";
-	c.fillRect(0,0,canvas.width,canvas.height);
-	
 	c.restore();
 
-	setTimeout(function(){refresh();}, 10);
+	setTimeout(function(){refresh();}, 5);
 }
 
