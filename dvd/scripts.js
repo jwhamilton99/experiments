@@ -68,7 +68,7 @@ function refresh() {
 	c.fillStyle = "rgba("+r+","+g+","+b+",1)";
 	c.fillRect(x,y,160,120);
 	
-	c.globalCompositeOperation = "destination-atop";
+	// c.globalCompositeOperation = "destination-atop";
 	
 	
 	c.drawImage(logo, x, y, 160, 80);
