@@ -5,6 +5,7 @@ These are experiments I've either finished or abandoned.
 * [Bubblegum](https://www.jwhamilton.co/bubblegum)
 * [Drift](https://www.jwhamilton.co/drift)
 * [DVD](https://www.jwhamilton.co/experiments/dvd) (Also available as a [screensaver](https://github.com/jwhamilton99/macos-dvd-screensaver)!)
+* [hamOS](https://www.jwhamilton.co/hamOS/)
 * [Hey](https://www.jwhamilton.co/hey)
 * [Image to ASCII Art](https://www.jwhamilton.co/ascii-art/)
 * [Is It Keynote Day?](https://www.jwhamilton.co/isitkeynoteday)
